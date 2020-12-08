@@ -13,7 +13,8 @@ Generare l'immagine del Webserver basato sull'immagine docker php:7.3-apache
 
 `$ sudo docker build -t rientri .`
 
-Modificare il filedocker-compose.yaml
+Modificare il file docker-compose.yaml
+`$ vim docker-compose.yaml`
 
 Sceglere la password per il vostro server MySQL
 
