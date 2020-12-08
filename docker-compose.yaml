@@ -1,0 +1,42 @@
+version: "3.2"
+
+services: 
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql_rientri
+    ports:
+      - "3399:3306"
+    volumes: 
+      - ./mysql/data:/var/lib/mysql:rw
+      - ./dump:/docker-entrypoint-initdb.d
+    environment: 
+      - MYSQL_DATABASE=rientri
+      - MYSQL_ROOT_PASSWORD=la_tua_password
+    expose: 
+      - "3306"
+    restart: always
+
+  webserver:
+    depends_on: 
+      - db 
+    image: rientri
+    container_name: rientri_r
+    restart: always
+    ports: 
+     - 8077:80
+    volumes: 
+      - ./rientri:/var/www/html:rw
+
+  phpmyadmin:
+    depends_on: 
+      - db  
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_rientri
+    environment:
+     - PMA_HOST=db
+    restart: always
+    ports:
+     - 8078:80
+    volumes:
+     - ./sessions
