@@ -6,6 +6,7 @@ Per prima cosa occorre installare sul vostro sistema **[Docker](https://www.dock
 Clonate questo progetto attraverso il seguente comando: 
 
 `$ git clone https://github.com/marcogarro/PiattaformaRientriSicilia.git`
+
 `$ cd PiattaformaRientriSicilia`
 
 Generare l'immagine del Webserver basato sull'immagine docker php:7.3-apache
@@ -17,6 +18,7 @@ Modificare il filedocker-compose.yaml
 Sceglere la password per il vostro server MySQL
 
 Avviare il servizio come segue: 
+
 `$ sudo docker-compose up -d`
 
 Adesso è necessario importare la struttura del DB rientri. 
