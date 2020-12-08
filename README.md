@@ -20,10 +20,12 @@ Avviare il servizio come segue:
 `$ sudo docker-compose up -d`
 
 Adesso è necessario importare la struttura del DB rientri. 
-Avviare phpMyAdmin accedendo alla URL http://localhost:8078
+Avviare phpMyAdmin accedendo alla URL **http://localhost:8078**
 Importare il file rientri.sql 
 
 Utilizzare phpMyAdmin per creare le utente all'interno della tabella **tbl_users**
+
+Adesso è possibile accedere alla piattaforma attraverso la URL **http://localhost:8077**
 
 La tabella **isolamenti_extra_ue** viene alimentata dall'export dei dati che ogni ASP può fare da CostruireSalute.it relativamente al proprio territorio.
 La popolazione della suddetta tabella può avvenire anche tramite l'apposito front-end presente all'interno della piattaforma.
