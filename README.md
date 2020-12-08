@@ -9,6 +9,8 @@ Clonate questo progetto attraverso il seguente comando:
 
 `$ cd PiattaformaRientriSicilia`
 
+Decomprimere i file PHPMailer.zip e rientri.zip
+
 Generare l'immagine del Webserver basato sull'immagine docker php:7.3-apache
 
 `$ sudo docker build -t rientri .`
